@@ -32,7 +32,6 @@ jobs:
       - name: ✅︎ Auto-approve and merge pull request
         if: steps.check_pr_title.outputs.eligible == 'true'
         run: |
-          gh pr review ${{ github.event.pull_request.number }} --approve
           gh pr merge ${{ github.event.pull_request.number }} --admin --squash
         env:
           GH_TOKEN: ${{ github.token }}
