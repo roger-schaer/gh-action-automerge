@@ -1,1 +1,1 @@
-# gh-action-automerge
+# gh-action-automerge - NOK
