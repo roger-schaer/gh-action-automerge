@@ -32,6 +32,6 @@ jobs:
         if: steps.check_pr_title.outputs.eligible == 'true'
         run: |
           gh pr review ${{ github.event.pull_request.number }} --approve
-          gh pr merge ${{ github.event.pull_request.number }} --squash --auto
+          gh pr merge ${{ github.event.pull_request.number }} --squash
         env:
           GH_TOKEN: ${{ github.token }}
